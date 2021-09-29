@@ -7,8 +7,6 @@ while (true) {
     if(input === 'q' || input === null){
         break;
     }
-
-
     arr.push(Number(input));
     console.log(arr);
 }

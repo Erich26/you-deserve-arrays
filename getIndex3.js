@@ -1,18 +1,15 @@
 const prompt = require('prompt-sync')({ sigint: true});
 
-let arr = [];
+const array = JSON.parse(prompt('Enter an Array: '));
 
-while (true) {
-    let input = prompt('add an array:  enter "q" to quit');
-    if(input === 'q' || input === null){
-        break;
-    }
+let fourthOrLast;
 
-
-    arr.push(Number(input));
-    console.log(arr);
+if (array < 4) {
+    fourthOrLast = array[array.length - 1];
+} else {
+    fourthOrLast = array[3];
 }
 
+console.log('The fourth (or last) item is: ', fourthOrLast)
 
-console.log(arr[2]);
 
